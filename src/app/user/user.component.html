@@ -1,0 +1,26 @@
+
+
+<main>
+    <div>
+        <img src="https://cdn.discordapp.com/attachments/547485613721649162/916021454364098660/logo3.png" alt="logo">
+    </div>
+    <form [formGroup]="form" class="form-builder" >
+    
+
+        <mat-form-field appearance="outline">
+            <mat-label>CPF </mat-label>
+            <input matInput formControlName="cpf" >
+        </mat-form-field>
+      
+            <button mat-raised-button class="btn" (click)="foundUser()">
+                Casdastrar Vacina
+            </button>
+
+    </form>
+    <mat-label class="new" (click)="navigate()">Criar nova vacina</mat-label>
+</main>
+<!-- <li *ngFor="let item of docs">
+
+        {{ item }}
+
+    </li> -->

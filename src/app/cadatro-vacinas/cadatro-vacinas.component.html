@@ -1,0 +1,33 @@
+<main>
+    <div>
+        <img src="https://cdn.discordapp.com/attachments/547485613721649162/916021454364098660/logo3.png" alt="logo">
+    </div>
+    <form [formGroup]="form" class="form-builder" >
+        <div class="primeiralinha">
+      
+
+            <mat-form-field appearance="outline">
+                <mat-label>Nome da vacina</mat-label>
+                <input matInput formControlName="nome" >
+            </mat-form-field>
+        </div>
+
+            <mat-form-field appearance="outline">
+                <mat-label>Num. Doses </mat-label>
+                <input matInput formControlName="doses" >
+            </mat-form-field>
+
+        <mat-form-field appearance="outline">
+            <mat-label>Indicação </mat-label>
+            <input matInput formControlName="indicacao" (click)="indicacao()">
+            <mat-icon matSuffix>keyboard_arrow_down</mat-icon>
+        </mat-form-field>
+
+      
+    
+            <button mat-raised-button class="btn" (click)="createVacina()">
+                Casdastrar Vacina
+            </button>
+
+    </form>
+</main>

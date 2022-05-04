@@ -1,0 +1,19 @@
+<main>
+  <form [formGroup]="form">
+    <img src="https://cdn.discordapp.com/attachments/547485613721649162/916021454364098660/logo3.png" alt="logo">
+    <mat-label class="label">Cadastrando vacina no pasciente: {{usuario}}  </mat-label>
+      <mat-form-field appearance="outline">
+        <mat-label>{{label}}</mat-label>
+        <mat-select   formControlName="vacina">
+          <mat-option *ngFor="let vacina of docs" [value]="vacina.value" (click)="value(vacina)">
+            {{vacina.nome}}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+      <mat-slide-toggle formControlName="imunizado" color="primary">Imunizado</mat-slide-toggle>
+  
+      <button mat-raised-button class="btn" (click)="cadastrar()">Cadastrar</button>
+   
+  
+    </form>
+</main>
